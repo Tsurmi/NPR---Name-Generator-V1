@@ -26,7 +26,7 @@ require('./passport/routes')(app, passport) // load our routes and pass in our a
 
 app.use(require('./config/error-handler'))
 
-app.user('/api/users', userRoutes)
+app.use('/api/users', userRoutes)
 
 const server = app.listen(port, () => console.log(`Running on port: ${port}`))
 
