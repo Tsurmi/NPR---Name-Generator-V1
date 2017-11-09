@@ -17,7 +17,13 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
-    width: '15%'
+    width: '15%',
+    border: 'soild red'
+  },
+  links: {
+    textDecoration: 'none',
+    color: 'black',
+    fontFamily: 'Merriweather'
   }
 }
 
@@ -28,9 +34,9 @@ const Header = props => {
   return (
     <header className={classes.masterDiv}>
       <nav className={classes.navLinksLinks}>
-        <NavItem to='/'>Home</NavItem>
-        <NavItem to='/Generator'>NPR Generator</NavItem>
-        <NavItem to='/AddPerson'>Add Person</NavItem>
+        <NavItem className={classes.links} to='/Generator'>Generator</NavItem>
+        <NavItem className={classes.links} to='/AddHost'>Add Host</NavItem>
+        <NavItem className={classes.links} to='/AllHost'>All Host</NavItem>
       </nav>
     </header>
   )

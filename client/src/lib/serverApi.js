@@ -28,3 +28,14 @@ const handleErrors = response => {
   }
   return response
 }
+export const getAllHosts = () => ajaxRequest({url: '/api/hosts', method: 'GET'})
+
+export const getHostById = (hostId) => ajaxRequest({url: `/api/hosts/id/${hostId}`, method: 'GET'})
+
+export const addHost = (host) => ajaxRequest({url: '/api/hosts', method: 'POST', body: host})
+
+export const updateHost = (hostId, host) => ajaxRequest({url: `/api/hosts/id/${hostId}`, method: 'PUT', body: host})
+
+export const deleteHost = (hostId) => ajaxRequest({url: `/api/hosts/id/${hostId}`, method: 'DELETE'})
+
+export const getRandomHost = () => ajaxRequest({url: '/api/hosts/random', method: 'GET'})
